@@ -6,6 +6,7 @@ import store from './store'
 import './styles/common.css'
 import './unilts/index'
 import VCharts from 'v-charts'
+
 // import 'echarts-liquidfill/src/liquidFill.js'
 /* 全局引入 */
 // import Vant from 'vant'

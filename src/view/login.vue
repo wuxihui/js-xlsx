@@ -13,6 +13,7 @@
         <HelloWord :word.sync="wrd" />
 
         <button @click="exportData">导出</button>
+        <button @click="exportRs">导出Excel报表</button>
     </div>
 </template>
 
@@ -21,6 +22,7 @@
 import { mapState } from 'vuex'
 import HelloWord from '../components/HelloWorld'
 import XLSX from 'xlsx'
+import FileSaver from 'file-saver'
 export default {
     name: 'Login',
     data() {
@@ -92,6 +94,21 @@ export default {
             let wb = XLSX.utils.book_new()
             XLSX.utils.book_append_sheet(wb, ws, '数据') // 工作簿名称
             XLSX.writeFile(wb, '数据.xlsx') // 保存的文件名
+       },
+       exportRs () {
+            // var param = {}; // 参数
+            // let url = '接口地址';
+            // axios.post(url, param, {responseType: 'blob'})
+            //     .then(function (response) {
+            //         var data =  response.data;
+            //         var fileName = response.headers.filename;
+            //         saveAs(data,decodeURI(fileName));
+            //     })
+            //     .catch(function (error) {
+            //         console.log('导出失败，请稍后重试');
+            //     });
+            let blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
+            FileSaver.saveAs(blob, "helloWorld.txt");
        }
     }
 }
