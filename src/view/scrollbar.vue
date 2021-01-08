@@ -47,6 +47,7 @@ export default {
         //Validator.js 一个强大的js表单校验库, github地址: https://github.com/validatorjs/validator.js
         //Validate.js 致力于提供一种验证数据的跨框架和跨语言方式的js库, 已通过100％代码覆盖率的单元测试 github地址: https://github.com/ansman/validate.js
         //x-spreadsheet 一个基于web的简单易用的表格插件 github: https://github.com/myliang/x-spreadsheet
+        //numeral  一个用于格式化和处理数字的javascript库
 
         console.log("activated");
         Sortable.create(document.getElementById('foo'), {
